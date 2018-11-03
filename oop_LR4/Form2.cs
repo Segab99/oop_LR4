@@ -33,12 +33,24 @@ namespace oop_LR4
             }
             else
             {
-                CPerson person = new CPerson(textBox1.Text, textBox2.Text, textBox3.Text);
-                spisok.AddPerson(person);
+                if (radioButton1.Checked)
+                {
+                    CStudent Student = new CStudent(textBox1.Text, textBox2.Text, textBox3.Text, EditGroup.Text, EditKurs.Text);
+                    spisok.AddPerson(Student);
+                }
+                if (radioButton3.Checked)
+                {
+                    CPerson person = new CPerson(textBox1.Text, textBox2.Text, textBox3.Text);
+                    spisok.AddPerson(person);
+                }
+               
+                
                 label_kw.Text = Convert.ToString(spisok.Kw_pers);
                 textBox1.Text = "";
                 textBox2.Text = "";
                 textBox3.Text = "";
+                //radioButton1.Enabled = false;
+                //radioButton3.Enabled = false;
             }
         }
 

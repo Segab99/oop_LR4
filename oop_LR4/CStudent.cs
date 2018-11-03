@@ -21,8 +21,8 @@ namespace oop_LR4
 
         public CStudent(string f, string n, string o, string g, string k) : base(f, n, o)
         {
-            group_ = g;
-            kurs_ = k;
+            Group = g;
+            Kurs = k;
         }
 
         public string Kurs
@@ -33,8 +33,9 @@ namespace oop_LR4
                 if(Convert.ToInt32(value) > 5) value = "5";
                 kurs_ = value;
             }
+            get => kurs_;
         }
-        public string Group { set => group_ = value.ToUpper(); }
+        public string Group { set => group_ = value.ToUpper(); get => group_; }
         public override string FullData => base.FullData + " " + group_ + " " + kurs_;
         public override void WriteData(StreamWriter objWriter)
         {
