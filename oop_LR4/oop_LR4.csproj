@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="CPerson.cs" />
     <Compile Include="CSpisok.cs" />
+    <Compile Include="CStudent.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

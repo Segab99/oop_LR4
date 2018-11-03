@@ -13,7 +13,7 @@ namespace oop_LR4
         private string fam;
         private string name;
         private string otch;
-        private string GetFullData()
+        private  string GetFullData()
         {
             return fam + " " + name + " " + otch;
         }
@@ -33,11 +33,11 @@ namespace oop_LR4
             set => otch = value.ToLower();
             get => otch;
         }
-        public string FullData
+        virtual public string FullData
         {
             get => GetFullData();
         }
-        public void WriteData(StreamWriter objWriter)
+        virtual public void WriteData(StreamWriter objWriter)
         {
             
             objWriter.WriteLine(fam);
